@@ -20,7 +20,7 @@ function isGUID($string)
     foreach ($string as $key => $hex) {
         if ((!ctype_xdigit($hex)) || (strlen($hex) !== $lengths[$key])) {
             $answer = false;
-        };
+        }
     }
     return $answer;
 }
