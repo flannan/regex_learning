@@ -15,7 +15,8 @@ echo 'PHP comparison' . PHP_EOL;
 foreach ($strings as $string) {
     $isCorrect = ctype_digit($string);
     if ($isCorrect) {
-        $isCorrect = (((int)$string >= 1e5) && ((int)$string < 1e6));
+        $number = (int)$string;
+        $isCorrect = (($number >= 1e5) && ($number < 1e6));
     }
     var_export($isCorrect);
     echo PHP_EOL;
