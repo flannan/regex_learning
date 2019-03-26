@@ -49,7 +49,7 @@ foreach ($sampleURLs as $sampleURL) {
 
 echo 'regex comparison' . PHP_EOL;
 //$regex = '#((http|https)://)?(\w+)/.(\w+)(\:\d*)?#';
-$regex = '#(^(http|https)://)?([^\W_ ]{2,}[\.,/%])+[^\W_ ]{2,3}(\#(\w*))?(\?.*)?(\:\d{4})?$#';
+$regex = '#(^(http|https):\/\/)?([^\W_ ]{2,}[\.,\%])+[^\W_ ]{2,4}(\#(\w*))?(\?.*)?(\:\d{4})?$#';
 
 foreach ($sampleURLs as $sampleURL) {
     echo preg_match($regex, $sampleURL) . PHP_EOL;
